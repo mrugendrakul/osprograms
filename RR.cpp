@@ -6,7 +6,7 @@ class process{
     public:
     int id,at,bt,ct;
 
-    process();
+    
 };
 
 

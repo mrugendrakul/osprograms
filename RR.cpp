@@ -12,5 +12,9 @@ class process{
 
 
 int main(){
+    int n;
+    cout<<"give number of process:";
+    cin >>n;
+    process p[n];
     
 }

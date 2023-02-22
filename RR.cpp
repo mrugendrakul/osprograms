@@ -16,26 +16,28 @@ void roundRobin(process p[],int tq,int n){
     queue<process> rq;
     int cot=0;
     rq.push(p[0]);
-    
-    while(rq.empty()){
+    cout<<"front :"<<rq.front().bt<<endl;
+    cout<<"is empty::"<<rq.empty()<<endl;
+    while(!rq.empty()){
         process temp=rq.front();
-        cout<<"current process in rq is: "<<temp.id<<endl;
+        cout<<"current process in rq is: "<<temp.bt<<endl;
         gantt.push_back(temp);
         rq.pop();
-        if(temp.bt>tq){
+        if(temp.bt>=tq){
             temp.bt-=tq;
         }
         else{
             temp.bt=0;
         }
-        for(int i=0;i<n;i++){
-            if(p[i].at<=cot){
-                rq.push(p[i]);
-            }
-        }
-        if(temp.bt!=0){
-            rq.push(temp);
-        }
+        cout<<"current bt after :"<<temp.bt<<endl;
+        // for(int i=0;i<n;i++){
+        //     if(p[i].at<=cot && p[i].bt!=0){
+        //         rq.push(p[i]);
+        //     }
+        // }
+        // if(temp.bt!=0){
+        //     rq.push(temp);
+        // }
     }
 }
 
@@ -70,7 +72,7 @@ int main(){
         cin>>p[i].bt;
     }
     int tq=0;
-    cout<<"time quantum";
+    cout<<"time quantum:";
     cin>>tq;
     sortByAt(p,n);
     roundRobin(p,tq,n);

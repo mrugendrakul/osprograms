@@ -30,14 +30,14 @@ void roundRobin(process p[],int tq,int n){
             temp.bt=0;
         }
         cout<<"current bt after :"<<temp.bt<<endl;
-        // for(int i=0;i<n;i++){
-        //     if(p[i].at<=cot && p[i].bt!=0){
-        //         rq.push(p[i]);
-        //     }
-        // }
-        // if(temp.bt!=0){
-        //     rq.push(temp);
-        // }
+        for(int i=0;i<n;i++){
+            if(p[i].at<=cot && p[i].bt!=0){
+                rq.push(p[i]);
+            }
+        }
+        if(temp.bt!=0){
+            rq.push(temp);
+        }
     }
 }
 

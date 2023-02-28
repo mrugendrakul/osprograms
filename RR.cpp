@@ -4,7 +4,7 @@ using namespace std;
 
 class process{
     public:
-    int id,at,bt,ct,com,index;
+    int id,at,bt,ct,com,wt,tat,index;
 
     
 };
@@ -99,6 +99,10 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>p[i].bt;
     }
+    int brtime[n];
+    for(int i=0;i<n;i++){
+        brtime[i]=p[i].bt;
+    }
     int tq=0;
     cout<<"time quantum:";
     cin>>tq;
@@ -107,7 +111,29 @@ int main(){
     }
     sortByAt(p,n);
     roundRobin(p,tq,n);
+    cout<<"completion time are :"<<endl;
     for(int i=0;i<n;i++){
         cout<<p[i].ct<<endl;
     }
+    
+    for(int i=0;i<n;i++){
+        p[i].tat=p[i].ct-p[i].at;
+    }
+    for(int i=0;i<n;i++){
+        
+        p[i].wt=p[i].tat-brtime[i];
+        cout<<"waiting time: "<<p[i].wt<<endl;
+    }
+    
+    float avgtat=0;
+    for(int i=0;i<n;i++){
+        avgtat+=(float)p[i].tat;
+    }
+    cout<<"avgtat: "<<avgtat/n<<endl;
+
+    float avgwt=0;
+    for(int i=0;i<n;i++){
+        avgwt+=(float)p[i].wt;
+    }
+    cout<<"avgtat: "<<avgwt/n<<endl;
 }

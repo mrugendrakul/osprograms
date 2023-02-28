@@ -48,7 +48,7 @@ void roundRobin(process p[],int tq,int n){
         cout<<"current cot:"<<cot<<endl;
         p[rq.front().index].ct=cot;
         //  rq.pop();
-        cout<<"original bt is:"<<p[rq.front().index].bt<<endl;
+        // cout<<"original bt is:"<<p[rq.front().index].bt<<endl;
 
         for(int i=1;i<n;i++){
             if(p[i].at<=cot && visited[p[i].index]==0){

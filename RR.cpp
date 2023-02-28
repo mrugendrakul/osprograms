@@ -119,10 +119,11 @@ int main(){
     for(int i=0;i<n;i++){
         p[i].tat=p[i].ct-p[i].at;
     }
+    cout<<"waiting times:"<<endl;
     for(int i=0;i<n;i++){
         
         p[i].wt=p[i].tat-brtime[i];
-        cout<<"waiting time: "<<p[i].wt<<endl;
+        cout<<p[i].wt<<endl;
     }
     
     float avgtat=0;

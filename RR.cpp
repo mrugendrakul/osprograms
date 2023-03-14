@@ -136,5 +136,5 @@ int main(){
     for(int i=0;i<n;i++){
         avgwt+=(float)p[i].wt;
     }
-    cout<<"avgtat: "<<avgwt/n<<endl;
+    cout<<"avgwt: "<<avgwt/n<<endl;
 }

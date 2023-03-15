@@ -6,8 +6,8 @@ int main() {
    int pipefds1[2], pipefds2[2];
    int returnstatus1, returnstatus2;
    int pid;
-   char pipe1writemessage[20] = "Hi";
-   char pipe2writemessage[20] = "Hello";
+   char pipe1writemessage[20] = "Hey child";
+   char pipe2writemessage[20] = "Hello parent";
    char readmessage[20];
    returnstatus1 = pipe(pipefds1);
    

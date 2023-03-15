@@ -15,7 +15,7 @@ void roundRobin(process p[],int tq,int n){
     vector<process> gantt;
     queue<process> rq;
     // process pr[n]=p;
-    int cot=0;
+    int cot=p[0].at;
     rq.push(p[0]);
     cout<<"front :"<<rq.front().bt<<endl;
     cout<<"is empty::"<<rq.empty()<<endl;

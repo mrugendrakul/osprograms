@@ -3,6 +3,8 @@
 #include<unistd.h>
 
 int main() {
+   //chnages
+   
    int pipefds1[2], pipefds2[2];
    int returnstatus1, returnstatus2;
    int pid;
